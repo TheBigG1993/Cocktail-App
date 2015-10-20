@@ -1,0 +1,72 @@
+@@include('includes/header.html', {
+  "page_title": ""
+})
+
+<div class="row" id="top_bar">
+  <nav id="title_bar" class="grey lighten-5">
+    <i class="material-icons">view_module</i>
+    <h1 id="pagetitle">Find a Recipe</h1>
+  </nav>
+
+  <ul class="tabs grey lighten-5">
+    <li class="tab col s4"><a  href="#test1">Popular</a></li>
+    <li class="tab col s4"><a class="active" href="#test2">Search</a></li>
+    <li class="tab col s4"><a href="#test3">Genius</a></li>
+  </ul>
+</div>
+
+<div class="row">
+ <div class="col s12">
+
+ </div>
+ <div id="test1" class="col s12">
+  <ul class="drink_list">
+    <li>
+      <span class="detail">
+        <i class="material-icons">stars</i>
+        <small>54</small>
+      </span>
+      <span style="display: inline-block">
+        <span class="list_title">Whiskey Sour</span>
+        <span class="secondary_text">Whiskey, lemon, sugar</span>
+      </span>
+    </li>
+    <li>
+      <span class="detail">
+        <i class="material-icons">stars</i>
+        <small>23</small>
+      </span>
+      <span style="display: inline-block">
+        <span class="list_title">Martini</span>
+        <span class="secondary_text">Gin, dry vermouth, ice, lemon twist</span>
+      </span>
+    </li>
+    <li>
+      <span class="detail">
+        <i class="material-icons">stars</i>
+        <small>17</small>
+      </span>
+      <span style="display: inline-block">
+        <span class="list_title">Margarita</span>
+        <span class="secondary_text">Tequila, lime, sugar</span>
+      </span>
+    </li>
+    <li>
+      <span class="detail">
+        <i class="material-icons">stars</i>
+        <small>4</small>
+      </span>
+      <span style="display: inline-block">
+        <span class="list_title">Mojito</span>
+        <span class="secondary_text">Rum, lime, mint, sugar</span>
+      </span>
+    </li>
+  </ul>
+ </div>
+ <div id="test2" class="col s12">
+   <input id='searchbox' type="text" placeholder="Search">
+ </div>
+ <div id="test3" class="col s12"></div>
+</div>
+
+@@include('includes/footer.html')

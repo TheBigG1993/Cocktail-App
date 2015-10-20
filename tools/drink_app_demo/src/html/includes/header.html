@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    @@if (typeof page_title === "string" && page_title.length > 0) {<title>@@page_title :: Untitled Document</title>
+
+    }
+    @@if (typeof page_title !== "string" || !page_title.length > 0) {<title>Untitled Document</title>
+
+    }
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="@@if (typeof meta_description === "string" && meta_description.length > 0) {@@meta_description}">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    @@if (typeof head_css === "string" && head_css.length > 0) {@@head_css
+    }
+
+    @@if (typeof head_js === "string" && head_js.length > 0) {@@head_js
+    }
+
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+
+    <style media="screen">
+      body {
+        color: #212121;
+      }
+      .secondary_text {
+        color: #757575;
+      }
+      h1 {
+        margin: 0;
+      }
+      .indicator {
+        bottom: -1px !important;
+        height: 3px !important;
+      }
+      #top_bar {
+        border-bottom: 1px solid #d2d2d2;
+        margin: 0;
+      }
+      #top_bar, #top_bar h1 {
+        color: #212121;
+      }
+      #top_bar i {
+        color: #737373;
+      }
+      #top_bar a {
+        color: #757575;
+      }
+      #top_bar a.active {
+        color: #ee6e73;
+      }
+
+      #pagetitle {
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        font-size: 1.5em;
+        top: 0px;
+        position: relative;
+        font-weight: 500;
+        margin-left: -1px;
+      }
+      .material-icons {
+        display: inline-block;
+        width: 25%;
+      }
+      #title_bar {
+        padding-top: 0.6em;
+      }
+      #title_bar i {
+        display: inline-block;
+        font-size: 2.5em;
+        position: relative;
+        top: 12px;
+        left: 16px;
+      }
+      .drink_list {
+
+      }
+      .drink_list li {
+        border-bottom: 1px solid #d2d2d2;
+        padding: 1.75em 0;
+
+      }
+      .list_title {
+        font-size: 1.3em;
+      }
+      .drink_list .secondary_text {
+        display: block;
+      }
+      .detail {
+        display: inline-block;
+        padding-right: 0.75em;
+        position: relative;
+      }
+      .detail i {
+        display: block;
+        width: auto;
+        line-height: 1;
+      }
+      .detail small {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 0.9em;
+      }
+      .s12 {
+        padding: 0 1.25em !important;
+      }
+      ul {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>

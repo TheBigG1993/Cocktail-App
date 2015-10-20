@@ -1,0 +1,23 @@
+{
+  "name": "drink-app-demo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Mantooth",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.7.12",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-csso": "^1.0.0",
+    "gulp-file-include": "^0.11.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-stylus": "^2.0.5",
+    "gulp-uglify": "^1.2.0",
+    "jeet": "^6.1.2",
+    "normalize.css": "^3.0.3",
+    "rupture": "^0.6.1"
+  }
+}

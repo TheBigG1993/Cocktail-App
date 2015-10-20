@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Untitled Document</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+
+    <style media="screen">
+      body {
+        color: #212121;
+      }
+      .secondary_text {
+        color: #757575;
+      }
+      h1 {
+        margin: 0;
+      }
+      .indicator {
+        bottom: -1px !important;
+        height: 3px !important;
+      }
+      #top_bar {
+        border-bottom: 1px solid #d2d2d2;
+        margin: 0;
+      }
+      #top_bar, #top_bar h1 {
+        color: #212121;
+      }
+      #top_bar i {
+        color: #737373;
+      }
+      #top_bar a {
+        color: #757575;
+      }
+      #top_bar a.active {
+        color: #ee6e73;
+      }
+
+      #pagetitle {
+        display: inline-block;
+        text-align: center;
+        width: 50%;
+        font-size: 1.5em;
+        top: 0px;
+        position: relative;
+        font-weight: 500;
+        margin-left: -1px;
+      }
+      .material-icons {
+        display: inline-block;
+        width: 25%;
+      }
+      #title_bar {
+        padding-top: 0.6em;
+      }
+      #title_bar i {
+        display: inline-block;
+        font-size: 2.5em;
+        position: relative;
+        top: 12px;
+        left: 16px;
+      }
+      .drink_list {
+
+      }
+      .drink_list li {
+        border-bottom: 1px solid #d2d2d2;
+        padding: 1.75em 0;
+
+      }
+      .list_title {
+        font-size: 1.3em;
+      }
+      .drink_list .secondary_text {
+        display: block;
+      }
+      .detail {
+        display: inline-block;
+        padding-right: 0.75em;
+        position: relative;
+      }
+      .detail i {
+        display: block;
+        width: auto;
+        line-height: 1;
+      }
+      .detail small {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 0.9em;
+      }
+      .s12 {
+        padding: 0 1.25em !important;
+      }
+      ul {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+
+<div class="row" id="top_bar">
+  <nav id="title_bar" class="grey lighten-5">
+    <i class="material-icons">view_module</i>
+    <h1 id="pagetitle">Find a Recipe</h1>
+  </nav>
+
+  <ul class="tabs grey lighten-5">
+    <li class="tab col s4"><a  href="#test1">Popular</a></li>
+    <li class="tab col s4"><a class="active" href="#test2">Search</a></li>
+    <li class="tab col s4"><a href="#test3">Genius</a></li>
+  </ul>
+</div>
+
+<div class="row">
+ <div class="col s12">
+
+ </div>
+ <div id="test1" class="col s12">
+  <ul class="drink_list">
+    <li>
+      <span class="detail">
+        <i class="material-icons">stars</i>
+        <small>54</small>
+      </span>
+      <span style="display: inline-block">
+        <span class="list_title">Whiskey Sour</span>
+        <span class="secondary_text">Whiskey, lemon, sugar</span>
+      </span>
+    </li>
+    <li>
+      <span class="detail">
+        <i class="material-icons">stars</i>
+        <small>23</small>
+      </span>
+      <span style="display: inline-block">
+        <span class="list_title">Martini</span>
+        <span class="secondary_text">Gin, dry vermouth, ice, lemon twist</span>
+      </span>
+    </li>
+    <li>
+      <span class="detail">
+        <i class="material-icons">stars</i>
+        <small>17</small>
+      </span>
+      <span style="display: inline-block">
+        <span class="list_title">Margarita</span>
+        <span class="secondary_text">Tequila, lime, sugar</span>
+      </span>
+    </li>
+    <li>
+      <span class="detail">
+        <i class="material-icons">stars</i>
+        <small>4</small>
+      </span>
+      <span style="display: inline-block">
+        <span class="list_title">Mojito</span>
+        <span class="secondary_text">Rum, lime, mint, sugar</span>
+      </span>
+    </li>
+  </ul>
+ </div>
+ <div id="test2" class="col s12">
+   <input id='searchbox' type="text" placeholder="Search">
+ </div>
+ <div id="test3" class="col s12"></div>
+</div>
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>
+

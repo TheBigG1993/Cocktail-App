@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="data.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js" charset="utf-8"></script>
+
+    <style media="screen">
+      body {
+        font-family: "Avenir Next";
+      }
+      h1 {
+        font-size: 1.3em;
+        font-weight: 600;
+      }
+      h2 {
+        font-size: 1.1em;
+        font-weight: 500;
+      }
+      .minspace {
+        display: inline-block;
+        min-width: 5.5em;
+      }
+      strong {
+        font-weight: 500;
+      }
+      #results > li {
+      }
+    </style>
+  </head>
+  <body>
+
+    <form>
+      <input type="text" id="search">
+      <button>Search</button>
+    </form>
+
+    <ul id="results">
+
+    </ul>
+
+    <script>
+
+
+      $("form").submit(function(e) {
+        e.preventDefault();
+        findAndShow($("#search").val());
+      })
+
+      function find(title) {
+        var results = [];
+
+        $("#results").empty();
+
+        for (recipe of data)
+          if (recipe.title.toLowerCase().search(title.toLowerCase()) > -1)
+            results.push(recipe);
+
+        return results;
+      }
+
+      function findAndShow(title) {
+        var results = find(title);
+
+        for (recipe of results) {
+          var html = `<li><h1>${recipe.title}</h1><h2>Ingredients:</h2><ul>`;
+
+
+
+          for (ingredient of recipe.ingredients)
+            html += `<li><strong class="minspace">${ingredient.amount}</strong> ${ingredient.name}</li>`;
+
+          html += `</ul><h2>Instructions:</h2>`;
+
+          html += `<p>${recipe.instructions}</p>`;
+
+          html += `</li>`;
+          $("#results").append(html);
+        }
+      }
+    </script>
+  </body>
+</html>
