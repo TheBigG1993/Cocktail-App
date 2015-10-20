@@ -1,0 +1,20 @@
+List of Features with Priority values
+
+Search : 1
+
+-Popularity 1
+
+-Name 1
+
+-Ingredients 2
+
+Cabinet : 1
+
+- Cabinet search : LAST ( extra feature )
+
+Favorites : 1
+
+Share to FaceBook : 1
+
+- Authentication : 1
+
