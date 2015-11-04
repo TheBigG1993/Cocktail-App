@@ -87,6 +87,7 @@ function process_request(id) {
     jsdom.env({
       url: root_url + id, // Download this URL for processing
       src: [jquery], // Import jQuery into this page
+      encoding: 'binary',
       done: function (err, window) { // When finished downloading, do:
 
         // Increment counter — note that the for loop will be finished
@@ -146,6 +147,8 @@ function process_request(id) {
           instructions: instructions
         };
 
+        if (drink.title.length === 0 || drink.ingredients.length === 0 || drink.instructions.length === 0) reject();
+
         resolve(drink);
       }
     });
@@ -160,8 +163,8 @@ function saveJSON (data) {
   try {
     // Clear the data file before starting
     fs.truncateSync("data.json", 0);
-    
-    fs.writeFileSync("data.json", string);
+
+    fs.writeFileSync("data.json", string, 'utf8');
   } catch (e) {
     console.log(e);
   }
