@@ -29,7 +29,7 @@ if (cluster.isMaster) {
       worker.send({type: "new", data: counter});
       counter++;
     } else if (message.type === "done") {
-      console.log(`(${counter - 8} of 6217) Adding ${message.data.title}`);
+      console.log(`(${counter - numWorkers} of 6217) Adding ${message.data.title}`);
       drinks.push(message.data);
       worker.send({type: "new", data: counter});
       counter++;
@@ -49,10 +49,7 @@ if (cluster.isMaster) {
   var drinks = [];
 
   // To show a progress indicator
-  var counter = 1;
-
-
-
+  var counter = 0;
 
 // Cluster workers start here
 } else {
@@ -76,7 +73,7 @@ if (cluster.isMaster) {
         process.send({type: "done", data: data});
       })
       .catch(function (msg) {
-        process.send({type: "error", data: data});
+        process.send({type: "error"});
       });
     }
   });
@@ -134,7 +131,7 @@ function process_request(id) {
           });
 
           // Return the list
-          return list;
+          return JSON.stringify(list);
         })();
 
         var instructions = $("h3:contains('Mixing instructions:')").next("p").text();
