@@ -6,26 +6,31 @@
 |--------------------------------------------------------------------------
 |
 | Here is where you can register all of the routes for an application.
-| It is a breeze. Simply tell Lumen the URIs it should respond to
-| and give it the Closure to call when that URI is requested.
+| It's a breeze. Simply tell Laravel the URIs it should respond to
+| and give it the controller to call when that URI is requested.
 |
 */
-use Illuminate\Http\Response;
-use App\Models\Recipe;
 
-$app->get('/', function () use ($app) {
-  return "OK";
+Route::get('/', function () {
+    return "OK";
 });
 
-$app->group(['prefix' => 'recipe'], function ($app) {
+Route::get('/auth/login', function () {
+  $auth0Config = config('laravel-auth0');
+  return view('login')->with('auth0Config',$auth0Config);
+});
 
-    $app->get('/', function () {
-      return response("Requests for all data not allowed", 403);
-    });
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-    // Upgrade to a ts_vector for search later on
-    $app->get('search', 'App\Http\Controllers\RecipeController@search');
-    
-    $app->get('{id}', 'App\Http\Controllers\RecipeController@show');
+Route::get('/auth0/callback', '\Auth0\Login\Auth0Controller@callback');
 
+Route::group(['prefix' => 'recipe'], function () {
+  Route::get('/', function () {
+    return response("Requests for all data not allowed", 403);
+  });
+
+  Route::get('search', 'RecipeController@search');
+
+  Route::get('{id}', 'RecipeController@show');
 });
