@@ -1,2 +1,2 @@
 # Cocktail-App
-An andriod app for cocktail recipes
+An app for creating/viewing cocktail recipes
